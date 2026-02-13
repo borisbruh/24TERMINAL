@@ -1,0 +1,148 @@
+/* style.css */
+
+body {
+  margin: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+
+
+
+
+/* This is the screen container */
+#viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+
+
+
+/* Plane icon */
+.plane {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  filter: blur(1.2px);
+  background: #00ff00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  filter: blur(1px);
+  transition: opacity 0.2s linear;
+  box-shadow: 0 0 10px rgba(0,255,0,0.6);
+}
+
+
+
+
+
+
+#sweep {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	background: conic-gradient(
+		transparent 0deg,
+		rgba(0,255,0,0.01) 5deg,
+		rgba(0,255,0,0.05) 10deg,
+		rgba(0,255,0,0.07) 12deg,
+		rgba(0,255,0,0.1) 15deg,
+		rgba(0,255,0,0.15) 17deg,
+		rgba(0,255,0,0.2) 20deg,
+		rgba(0,255,0,0.22) 22deg,
+		rgba(0,255,0,0.25) 25deg,
+		rgba(0,255,0,0.37) 27deg,
+		rgba(0,255,0,0.5) 28deg,
+		rgba(0,255,0,0.75) 30deg,
+		rgba(0,255,0,1) 31deg,
+		transparent 32deg
+	);
+
+	transform-origin: center center;
+}
+
+
+
+#rings {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.ring {
+	position: absolute;
+	border: 1px solid rgba(0,255,0,0.15);
+	border-radius: 50%;
+}
+
+#clutter {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+
+.clutter-dot {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background: rgba(0,255,0,0.35);
+	border-radius: 50%;
+	filter: blur(0.5px);
+	opacity: 0;
+	transition: opacity 0.15s linear;
+}
+
+@keyframes clutterFade {
+	0% { opacity: 0; }
+	20% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+
+
+.radar-line {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 1px;
+  height: 50%;
+  background: rgba(0,255,0,0.25);
+  transform-origin: bottom center;
+}
+
+
+
+
+#radar {
+  position: relative;
+  width: 1024px;
+  height: 1024px;
+  background: radial-gradient(circle at center, #0f3d1f 0%, #061a0d 70%);
+  border-radius: 50%;
+  border: 3px solid rgba(0,255,0,0.4);
+  box-shadow: 0 0 40px rgba(0,255,0,0.2);
+  transform-origin: center center;
+  overflow: hidden;
+}
+
+#radar::before {
+  content: "";
+  position: absolute;
+  inser: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,255,0,0.04) 0px,
+    rgba(0,255,0,0.04) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
