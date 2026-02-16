@@ -1001,9 +1001,34 @@ towerElements.forEach(tower => {
 
 const runwayData = [
   {
-    name: "IGRV",
-    start: { x: -43729, y: -2569 }, // 06
-    end:   { x: -42602, y: -3169 }  // 24
+    name: "IKTO",
+    start: { x: -9225, y: -33530 }, // 13
+    end:   { x: -7612, y: -32270 }  // 32
+  },
+  {
+    name: "IKTO",
+    start: { x: -6992, y: -30698 }, // 02
+    end:   { x: -6295, y: -32613 }  // 20
+  },
+	  {
+    name: "IPPH",
+    start: { x: 18627, y: -19642 }, // 15
+    end:   { x: 17665, y: -21379 }  // 33
+  },
+  {
+    name: "IPPH",
+    start: { x: 17391, y: -20745 }, // 11
+    end:   { x: 19617, y: -19889 }  // 29
+  },
+  {
+    name: "IMLR",
+    start: { x: -20186, y: 15180 }, // 07
+    end:   { x: -18705, y: 14519 }  // 25
+  },
+  {
+    name: "IBTH",
+    start: { x: 5349, y: -4485 },   // 09
+    end:   { x: 6209, y: -4484 }    // 27
   },
   {
     name: "ILAR",
@@ -1016,9 +1041,14 @@ const runwayData = [
     end:   { x: 45773, y: 3582 }    // 28
   },
   {
+    name: "IGRV",
+    start: { x: -43729, y: -2569 }, // 06
+    end:   { x: -42602, y: -3169 }  // 24
+  },
+  {
     name: "ISAU",
     start: { x: -46785, y: 27578 }, // 08
-    end:   { x: -45418,  y: 27483 }  // 26
+    end:   { x: -45418, y: 27483 }  // 26
   }
 ];
 
