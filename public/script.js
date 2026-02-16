@@ -892,7 +892,8 @@ function updateRadarStats() {
     PING:     ${(PING_ALIVE_TIME*1000).toFixed(1)}<br>
     ZOOM:     ${scale.toFixed(1)}x<br>
     FLIGHT:   ${selectedPlaneIndex}/${planeList.length-1}<br>
-    TERMINAL: ${SPED}ms
+    TERMINAL: ${SPED}ms<br>
+	VERSION: Beta v0.1
   `;
 }
 
