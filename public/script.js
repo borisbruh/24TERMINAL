@@ -1001,6 +1001,11 @@ towerElements.forEach(tower => {
 
 const runwayData = [
   {
+    name: "IRFD",
+    start: { x: -3838, y: 20851 }, // 07R
+    end:   { x: -2340, y: 20215 }  // 25L
+  },  
+  {
     name: "IKTO",
     start: { x: -9225, y: -33530 }, // 13
     end:   { x: -7612, y: -32270 }  // 32
